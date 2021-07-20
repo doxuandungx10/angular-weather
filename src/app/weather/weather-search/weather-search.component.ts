@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
 export class WeatherSearchComponent implements OnInit {
   private searchStream = new Subject<string>()
   constructor(private _weatherService: WeatherService) { }
-
+  data: any = {}
   onSubmit(f: NgForm) {
     // console.log(f.value.location)
     this._weatherService.searchWeatherData(f.value.location)
@@ -25,14 +25,20 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   onSearchLocation(cityName: string) {
-    this.searchStream
-      .next(cityName)
+    this._weatherService.searchWeatherData(cityName)
+      .subscribe(
+        data => {
+          const weatherItem = new WeatherItem(data.name, data.weather[0].description.toUpperCase(), Math.round(data.main.temp - 273.15))
+          // this._weatherService.addWeatherItem(weatherItem)
+          this.data = data
+        }
+      )
   }
   ngOnInit() {
-    this.searchStream
-    switchMap((input: string) => this._weatherService.searchWeatherData(input))
-      .subscribe(
-        data => console.log(data)
-      )
+    // this.searchStream
+    // switchMap((input: string) => this._weatherService.searchWeatherData(input))
+    //   .subscribe(
+    //     data => console.log(data)
+    //   )
   }
 }

@@ -1,11 +1,11 @@
 <section class="weather-search">
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <label for="city">City</label>
-    <input name="location" ngModel type="text" id="city" required #location="ngModel"
+    <input autocomplete="off" name="location" ngModel type="text" id="city" required #location="ngModel"
       (input)="onSearchLocation(input.value)" #input>
     <button type="submit">Add City</button>
   </form>
   <div class="result">
-    <span class="info">City found: </span><span class="info-cityname">City name</span>
+    <span class="info">City found: </span><span class="info-cityname">{{ data.name }}</span>
   </div>
 </section>
