@@ -1,12 +1,15 @@
-
-  
 header {
-  background-color: #3498db;
+  background-color: rgb(8, 10, 63);
   padding: 30px;
   width: 100%;
   color: white;
   text-align: center;
   font-size: 30px;
   color: #f1c40f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
-  
+
+body {
+  background-color:  linear-gradient(to bottom,#372865,#000);
+}

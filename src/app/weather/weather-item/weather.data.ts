@@ -1,9 +1,8 @@
 import { WeatherItem } from './weather-item';
 
 export const WEATHER_ITEMS: WeatherItem[] = [
-    new WeatherItem('Tokyo', 'CLOUDY', 20),
-    new WeatherItem('New York', 'SNOWY', 4),
-    new WeatherItem('Bangkok', 'WINDY', 25)
+    new WeatherItem('Tokyo', 'CLOUDY', 20, 84, 31, 30, 38),
+    new WeatherItem('New York', 'SNOWY', 4, 75, 25, 20, 28),
     // {
     //     cityName: "Tokyo",
     //     description: "Cloudy",

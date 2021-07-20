@@ -19,6 +19,9 @@ export class WeatherService {
     WEATHER_ITEMS.push(weatherItem)
   }
 
+  // getDayNight() {
+  //   return 
+  // }
   searchWeatherData(cityName: string): Observable<any> {
     return this._http.get<any>('http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=2518f44c4603f042bb2ff45520322286')
       .pipe(catchError((err) => {
