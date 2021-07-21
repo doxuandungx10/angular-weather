@@ -10,6 +10,8 @@ import { WeatherSearchComponent } from './weather/weather-search/weather-search.
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './weather/weather.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { WeatherService } from './weather/weather.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

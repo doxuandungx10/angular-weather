@@ -19,6 +19,10 @@ export class WeatherService {
     WEATHER_ITEMS.push(weatherItem)
   }
 
+  // deleteWeatherItem(weatherItem: WeatherItem) {
+  //   WEATHER_ITEMS.splice(0, 1)
+  // }
+
   // getDayNight() {
   //   return 
   // }
