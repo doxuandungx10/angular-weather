@@ -14,7 +14,7 @@
   </div>
   <div class="weatherWidgetRow" style="font-size: 40px;margin-top: 5px;">{{weatherItem.temperature}}°</div>
   <div class="weatherWidgetRow" style="font-size: 22px;">{{weatherItem.description}}</div>
-  <div class="weatherWidgetRow" style="font-size: 12px; margin-bottom: 14px;">Feels Like:
+  <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like:
     {{weatherItem.temp_feels_like}}°</div>
 
   <div class="weatherWidgetRow containerMaxMin" style="font-size: 24px;">
@@ -30,7 +30,9 @@
     </div>
   </div>
 
-  <div class="weatherWidgetRow" style="font-size: 44px; margin-top: 16px;text-align: center;">{{weatherItem.cityName}}
+  <div class="weatherWidgetRow" style="font-size: 44px; margin-top: 18px; margin-bottom: 18px;
+  text-align: center; line-height: 100%;">
+    {{weatherItem.cityName}}
   </div>
   <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{weatherItem.humidity}}%</div>
 

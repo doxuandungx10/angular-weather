@@ -24,7 +24,7 @@ export class WeatherSearchComponent implements OnInit {
           this._weatherService.addWeatherItem(weatherItem)
         }
       )
-    // console.log(this.data.name)
+    // console.log(this.data.sys.sunset)
   }
 
   onSearchLocation(cityName: string) {

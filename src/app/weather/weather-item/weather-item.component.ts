@@ -13,22 +13,23 @@ import { WeatherService } from '../weather.service';
 export class WeatherItemComponent implements OnInit {
   @Input('item') weatherItem!: WeatherItem
   @Input() cityName: string = ''
-  data: any = {
-    main: {},
-    isDay: null
-  }
+
+
   constructor(private _weatherService: WeatherService) { }
 
   ngOnInit() {
-    console.log(this.weatherItem.isDay)
   }
 
   getDayNight() {
-    let sunsetTime = new Date(this.weatherItem.isDay * 1000)
-    this.data.sunset_time = sunsetTime.toLocaleTimeString();
-    let currentDate = new Date();
-    this.data.isDay = (currentDate.getTime() < sunsetTime.getTime());
-    return this.data.isDay
+
+    console.log(this.weatherItem.isDay)
+    if (new Date().valueOf() / 1000 < this.weatherItem.isDay) {
+      // console.log('Day Time');
+      return true
+    } else {
+      // console.log('Night Time');
+      return false
+    }
   }
 }
 
