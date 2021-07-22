@@ -10,9 +10,70 @@ body {
     margin: 0;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
-    background: linear-gradient(to bottom, rgb(21, 29, 100) 35%, black);
+    // background: linear-gradient(to bottom, rgb(21, 29, 100) 35%, black, rgb(51, 51, 138), rgb(17, 17, 168));
+     background: linear-gradient(-45deg, rgb(24, 35, 134), #180f4e, #310070, #0d113a);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
     background-repeat: no-repeat;   
     background-attachment: fixed;
     height: 100%;
 
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 30%;
+    }
+    30% {
+        background-position: 30% 60%;
+    }
+    60% {
+        background-position: 60% 100%;
+    }
+    100% {
+        background-position: 0% 30%;
+    }
+}
+
+// html {
+//   height:100%;
+// }
+
+// body {
+//   margin:0;
+// }
+
+// .bg {
+//   animation:slide 2s ease-in-out infinite alternate;
+//   background-image: linear-gradient(-60deg, rgb(26, 24, 131) 50%, rgb(96, 85, 247) 50%);
+//   bottom:0;
+//   left:-50%;
+//   opacity:.8;
+//   position:fixed;
+//   right:-50%;
+//   top:0;
+//   z-index:-1;
+// }
+
+// .bg2 {
+//   animation-direction:alternate-reverse;
+//   animation-duration:4s;
+// }
+
+// .bg3 {
+//   animation-duration:4s;
+// }
+
+
+// h1 {
+//   font-family:monospace;
+// }
+
+// @keyframes slide {
+//   0% {
+//     transform:translateX(-20%);
+//   }
+//   100% {
+//     transform:translateX(20%);
+//   }
+// }

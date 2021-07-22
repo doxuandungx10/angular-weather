@@ -3,12 +3,6 @@
   width: 40%;
   text-align: center;
 
-  label {
-    font-weight: bold;
-    margin-right: 20px;
-    color: white;
-  }
-
   button, input {
     font-size: inherit;
     font-family: inherit;
@@ -19,6 +13,19 @@
     outline: none;
     width: 50%;
     margin-right: 20px;
+    
+    font-family: inherit;
+  // width: 100%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+
   }
 
   button {

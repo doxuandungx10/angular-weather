@@ -20,7 +20,7 @@ export class WeatherSearchComponent implements OnInit {
     this._weatherService.searchWeatherData(f.value.location)
       .subscribe(
         data => {
-          const weatherItem = new WeatherItem(data.name, data.weather[0].description.toUpperCase(), Math.round(data.main.temp - 273.15), data.main.humidity, Math.round(data.main.temp_max - 273.15), Math.round(data.main.temp_min - 273.15), Math.round(data.main.feels_like - 273.15))
+          const weatherItem = new WeatherItem(data.name, data.weather[0].description.toUpperCase(), Math.round(data.main.temp - 273.15), data.main.humidity, Math.round(data.main.temp_max - 273.15), Math.round(data.main.temp_min - 273.15), Math.round(data.main.feels_like - 273.15), data.sys.sunset)
           this._weatherService.addWeatherItem(weatherItem)
         }
       )
