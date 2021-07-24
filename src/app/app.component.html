@@ -1,11 +1,13 @@
-<!-- <div style="display: flex;"> -->
-<h1 id="title" [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'">
-  Angular Weather
-  <mat-slide-toggle [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'" [checked]="autoRenew.value"
-    [formControl]="autoRenew" (change)="onChange()">
-    {{autoRenew.value ? 'Light Mode' : 'Dark Mode'}}
-  </mat-slide-toggle>
-</h1>
-<!-- </div> -->
-<app-weather-search></app-weather-search>
-<app-weather-list></app-weather-list>
+<main [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'">
+  <!-- <div style="display: flex;"> -->
+  <h1 id="title" [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'">
+    Angular Weather
+    <mat-slide-toggle [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'" [checked]="autoRenew.value"
+      [formControl]="autoRenew" (change)="onChange()">
+      {{autoRenew.value ? 'Light Mode' : 'Dark Mode'}}
+    </mat-slide-toggle>
+  </h1>
+  <!-- </div> -->
+  <app-weather-search></app-weather-search>
+  <app-weather-list></app-weather-list>
+</main>

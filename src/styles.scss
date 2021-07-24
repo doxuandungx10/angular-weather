@@ -5,35 +5,39 @@ html {
    height: 100%;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
-    // background: linear-gradient(to bottom, rgb(21, 29, 100) 35%, black, rgb(51, 51, 138), rgb(17, 17, 168));
-     background: linear-gradient(-45deg, rgb(24, 35, 134), #180f4e, #310070, #0d113a);
-    background-size: 400% 400%;
-    animation: gradient 4s ease infinite;
-    background-repeat: no-repeat;   
-    background-attachment: fixed;
-    height: 100%;
+// body {
+//     padding: 0;
+//     margin: 0;
+//     font-family: "Roboto", Arial, sans-serif;
+//     font-size: 16px;
+//     // background: linear-gradient(to bottom, rgb(21, 29, 100) 35%, black, rgb(51, 51, 138), rgb(17, 17, 168));
+//     background: linear-gradient(-45deg, rgb(24, 35, 134), #180f4e, #310070, #0d113a);
+//     background-size: 400% 400%;
+//     animation: gradient 4s ease infinite;
+//     background-repeat: no-repeat;   
+//     background-attachment: fixed;
+//     height: 100%;
 
-}
+// }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 30%;
-    }
-    30% {
-        background-position: 30% 60%;
-    }
-    60% {
-        background-position: 60% 100%;
-    }
-    100% {
-        background-position: 0% 30%;
-    }
-}
+// .light {
+//     background: linear-gradient(to bottom, rgb(233, 250, 255), rgb(132, 251, 255));
+// }
+
+// @keyframes gradient {
+//     0% {
+//         background-position: 0% 30%;
+//     }
+//     30% {
+//         background-position: 30% 60%;
+//     }
+//     60% {
+//         background-position: 60% 100%;
+//     }
+//     100% {
+//         background-position: 0% 30%;
+//     }
+// }
 
 // html {
 //   height:100%;
