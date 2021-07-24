@@ -22,8 +22,8 @@ export class WeatherItemComponent implements OnInit {
 
   getDayNight() {
 
-    console.log(this.weatherItem.isDay)
-    if (new Date().valueOf() / 1000 < this.weatherItem.isDay) {
+    // console.log(this.weatherItem.sunSet)
+    if (this.weatherItem.sunRise < new Date().valueOf() / 1000 && new Date().valueOf() / 1000 < this.weatherItem.sunSet) {
       // console.log('Day Time');
       return true
     } else {

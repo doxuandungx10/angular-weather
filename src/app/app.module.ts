@@ -7,7 +7,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
 import { WeatherListComponent } from './weather/weather-list/weather-list.component';
 import { WeatherSearchComponent } from './weather/weather-search/weather-search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './weather/weather.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 registerLocaleData(en);
 
@@ -31,7 +32,9 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
   ],
   providers: [WeatherService, { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
