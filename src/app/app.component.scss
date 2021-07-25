@@ -18,6 +18,16 @@ main {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.h1Light {
+  background-color: rgb(218, 254, 255);
+  color: rgb(67, 32, 223);
+}
+
+.h1Dark {
+  background-color: rgb(8, 9, 58);
+  color: #f1c40f;
+}
+
 mat-slide-toggle {
   position: absolute;
   bottom: 42%;
@@ -28,15 +38,30 @@ mat-slide-toggle {
 
 .toggleChecked {
   color: rgb(67, 32, 223);
-  background: linear-gradient(-45deg, #baf1ff, #00c9e4, #a2ecff, #5cdef0);
+  background: linear-gradient(-45deg, #6be5e9, #c4f3f3, #6ce9ff, #abf7fa);
   background-size: 400% 400%;
-  animation: gradient 4s ease infinite;
+  animation: gradient 3s ease infinite;
   background-repeat: no-repeat;   
   background-attachment: fixed;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 30%;
+    }
+    30% {
+        background-position: 30% 60%;
+    }
+    60% {
+        background-position: 60% 100%;
+    }
+    100% {
+        background-position: 0% 30%;
+    }
+}
 .toggleUnChecked {
   color: #f1c40f;
-  background: linear-gradient(-45deg, rgb(24, 35, 134), #180f4e, #310070, #0d113a);
+  background: linear-gradient(-45deg, rgb(24, 39, 126), #180f4e, #3d018b, #0d113a);
   background-size: 400% 400%;
   animation: gradient 4s ease infinite;
   background-repeat: no-repeat;   

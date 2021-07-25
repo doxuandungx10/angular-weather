@@ -1,8 +1,8 @@
 <main [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'">
   <!-- <div style="display: flex;"> -->
-  <h1 id="title" [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'">
+  <h1 id="title" [ngClass]="autoRenew.value ? 'h1Light' : 'h1Dark'">
     Angular Weather
-    <mat-slide-toggle [ngClass]="autoRenew.value ? 'toggleChecked' : 'toggleUnChecked'" [checked]="autoRenew.value"
+    <mat-slide-toggle [ngClass]="autoRenew.value ? 'h1Light' : 'h1Dark'" [checked]="autoRenew.value"
       [formControl]="autoRenew" (change)="onChange()">
       {{autoRenew.value ? 'Light Mode' : 'Dark Mode'}}
     </mat-slide-toggle>
