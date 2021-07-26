@@ -5,7 +5,7 @@
 
 .weather-element {
     position: relative;
-    box-shadow: 1px 1px 6px #ccc;
+    box-shadow: 1px 1px 12px #ccc;
     margin-top: 40px;
     display: block;
     border-radius: 10px;
@@ -19,7 +19,7 @@
 
 .weather-element-light {
 position: relative;
-    box-shadow: 1px 1px 6px #ccc;
+    box-shadow: 1px 1px 12px rgb(0, 72, 94);
     margin-top: 40px;
     display: block;
     border-radius: 10px;
@@ -72,6 +72,17 @@ position: relative;
 
 .weather-element:hover>.weatherWidgetRow {
     opacity: 0.2;
+}
+
+.weather-element-light:hover>#showDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.weather-element-light:hover>.weatherWidgetRow {
+    opacity: 0.5;
 }
 
 
