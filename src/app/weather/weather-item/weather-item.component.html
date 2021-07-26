@@ -1,4 +1,4 @@
-<article class="weather-element">
+<article [ngClass]="checked ? 'weather-element-light' : 'weather-element'">
   <div id="showDelete">
     <i class="fas fa-3x fa-trash trash"></i>
   </div>
@@ -19,12 +19,12 @@
 
   <div class="weatherWidgetRow containerMaxMin" style="font-size: 24px;">
     <div class="min-container">
-      <span><i class="fas fa-1x fa-sort-up" style="margin-bottom: -12px; color: greenyellow;"></i></span>
+      <span><i class="fas fa-1x fa-sort-up sort-up"></i></span>
       <span>{{weatherItem.temp_min}}</span>
-      <span style="color: greenyellow; font-size: 14px;">Min</span>
+      <span class="text-sort-up">Min</span>
     </div>
     <div class="max-container">
-      <span><i class="fas fa-1x fa-sort-down" style="margin-bottom: -2px; color: red;"></i></span>
+      <span><i class="fas fa-1x fa-sort-down sort-down" style="margin-bottom: -2px; color: red;"></i></span>
       <span>{{weatherItem.temp_max}}</span>
       <span style="color: red; font-size: 14px;">Max</span>
     </div>
@@ -37,6 +37,3 @@
   <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{weatherItem.humidity}}%</div>
 
 </article>
-<!-- <div>
-
-</div> -->

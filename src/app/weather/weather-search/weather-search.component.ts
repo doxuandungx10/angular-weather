@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { WeatherItem } from '../weather-item/weather-item';
@@ -10,6 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./weather-search.component.scss']
 })
 export class WeatherSearchComponent implements OnInit {
+  @Input('change') checked!: boolean
   private searchStream = new Subject<string>()
   constructor(private _weatherService: WeatherService) { }
   data: any = {

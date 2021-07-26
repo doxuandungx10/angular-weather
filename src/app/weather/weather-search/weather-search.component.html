@@ -1,4 +1,4 @@
-<section class="weather-search">
+<section [ngClass]="checked ? 'weather-search-light' : 'weather-search'">
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <input placeholder="Enter city name" autocomplete="off" name="location" ngModel type="text" id="city" required
       #location="ngModel" (input)="onSearchLocation(input.value)" #input>

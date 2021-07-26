@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { WeatherItem } from './weather-item';
 import { WeatherService } from '../weather.service';
@@ -12,12 +13,12 @@ import { WeatherService } from '../weather.service';
 
 export class WeatherItemComponent implements OnInit {
   @Input('item') weatherItem!: WeatherItem
-  @Input() cityName: string = ''
-
+  @Input('change') checked!: boolean
 
   constructor(private _weatherService: WeatherService) { }
 
   ngOnInit() {
+    console.log(this.checked)
   }
 
   getDayNight() {

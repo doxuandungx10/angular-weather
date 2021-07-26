@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WEATHER_ITEMS } from '../weather-item/weather.data';
 import { WeatherItem } from '../weather-item/weather-item';
 import {
@@ -37,12 +37,14 @@ import {
   ]
 })
 export class WeatherListComponent implements OnInit {
+  @Input('change') checked!: boolean
   weatherItems: WeatherItem[] = WEATHER_ITEMS
   constructor() { }
 
   ngOnInit() {
     this.weatherItems = WEATHER_ITEMS;
     console.log(this.weatherItems)
+    console.log(this.checked)
   }
   deleteWeatherItem(i: number) {
     this.weatherItems.splice(i, 1)
