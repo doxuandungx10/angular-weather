@@ -12,11 +12,11 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 export class AppComponent {
 
   title = 'angular-weather';
-  checked!: boolean
+  checked!: boolean;
   autoRenew = new FormControl();
-  onChange() {
+  onChange(): void {
     console.log(this.autoRenew.value);
-    this.checked = this.autoRenew.value
-    console.log(this.checked)
+    this.checked = this.autoRenew.value;
+    console.log(this.checked);
   }
 }
